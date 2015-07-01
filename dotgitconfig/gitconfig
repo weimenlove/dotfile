@@ -1,0 +1,22 @@
+[color]
+    ui = true
+[user]
+    name = Matthew Wei
+    email = weimenlove@gmail.com
+[core]
+    editor = vim
+    excludesfile = /home/weimen/.gitignore
+    fileMode = false
+[alias]
+    ci = commit -s
+    st = status
+    co = checkout
+    br = branch
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[merge]
+    tool = meld
+[mergetool]
+    prompt = false
