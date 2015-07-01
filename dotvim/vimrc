@@ -12,8 +12,8 @@
 " add by fantity 2013-3-31
 set runtimepath+=$HOME/.dotfile/dotvim/bundle/vim-pathogen
 runtime autoload/pathogen.vim
-"call pathogen#infect('bundle/{}')
-"call pathogen#helptags()
+call pathogen#infect('bundle/{}')
+call pathogen#helptags()
 " add end
 
 " When started as "evim", evim.vim will already have done these settings.

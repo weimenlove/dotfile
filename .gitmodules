@@ -1,0 +1,6 @@
+[submodule "dotvim/bundle/vim-snipmate"]
+	path = dotvim/bundle/vim-snipmate
+	url = git@github.com:msanders/snipmate.vim.git
+[submodule "dotvim/bundle/vim-pathogen"]
+	path = dotvim/bundle/vim-pathogen
+	url = git@github.com:tpope/vim-pathogen.git
