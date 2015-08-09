@@ -3,7 +3,7 @@
 	  user-mail-address "weimenlove@gmail.com")
 
 ;;Emacs Initialization
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 ;;(add-to-list 'load-path "~/elisp")
 
 ;;Backups
