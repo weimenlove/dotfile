@@ -1,0 +1,6 @@
+*.o
+*.pro.user
+/dotemacs/elpa/
+/dotemacs/backups/
+/dotvim/bundle/
+\#*\#
