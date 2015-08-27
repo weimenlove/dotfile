@@ -17,14 +17,17 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode)
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t)
      ;; better-defaults
      emacs-lisp
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
-     ;; git
+     git
      ;; markdown
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -38,7 +41,9 @@
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(
+                                    magit-svn
+                                    )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'
@@ -167,9 +172,13 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   ;; linum-mode is very slow
+  (global-company-mode t)
+
   (add-hook 'prog-mode-hook #'linum-mode)
   (with-eval-after-load 'linum
     (linum-relative-toggle))
+
+  (add-to-list 'auto-mode-alist '("\\.c\\'" . c++-mode))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
