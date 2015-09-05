@@ -33,10 +33,6 @@
 (setq tab-width 4)
 (setq c-basic-offset 4)
 
-;;Show column number
-(global-linum-mode 1) ; always show line numbers
-(setq linum-format "%d ")  ;set format
-
 ;;hide welcome
 (setq inhibit-startup-message t)
 
@@ -79,3 +75,11 @@
 ; now let's call this function from c/c++ hooks
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
+
+(require 'evil)
+(evil-mode 1)
+
+;;Show column number
+(global-linum-mode 1) ; always show line numbers
+(require 'linum-relative)
+(linum-relative-on)
