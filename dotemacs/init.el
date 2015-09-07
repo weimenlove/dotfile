@@ -3,6 +3,7 @@
 	  user-mail-address "weimenlove@gmail.com")
 
 ;;Emacs Initialization
+(setq emacs-load-start-time (current-time))
 (add-to-list 'load-path "~/.emacs.d/lisp")
 ;;(add-to-list 'load-path "~/elisp")
 
@@ -50,34 +51,10 @@
 ;; Choose either auto-complete or company-mode by commenting one of below two lines!
 ;; (require 'init-auto-complete) ; after init-yasnippeta to override TAB
 
-; start auto-complete with emacs
-(require 'auto-complete)
-; do default config for auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-
+(require 'init-auto-complete)
+(require 'init-auto-complete-c-headers)
 (require 'init-yasnippet)
-; let's define a function which initializas auto-complete-c-headers
-; and gets called for c/c++ hooks
-(defun my:ac-c-header-init()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"/usr/include/c++/4.7")
-  (add-to-list 'achead:include-directories '"/usr/include/c++/4.7/i486-linux-gnu")
-  (add-to-list 'achead:include-directories '"/usr/include/c++/4.7/backward")
-  (add-to-list 'achead:include-directories '"/usr/lib/gcc/i486-linux-gnu/4.7/include")
-  (add-to-list 'achead:include-directories '"/usr/local/include")
-  (add-to-list 'achead:include-directories '"/usr/lib/gcc/i486-linux-gnu/4.7/include-fixed")
-  (add-to-list 'achead:include-directories '"/usr/include/i386-linux-gnu")
-  (add-to-list 'achead:include-directories '"/usr/include")
-)
-
-; now let's call this function from c/c++ hooks
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-
-(require 'evil)
-(evil-mode 1)
+(require 'init-evil)
 
 ;;Show column number
 (global-linum-mode 1) ; always show line numbers
