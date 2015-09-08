@@ -25,7 +25,6 @@
     undo-tree                           ;treat undo as a tree
     ;; vim emulation
     evil
-    evil-nerd-commenter
     ;; Color theme
     color-theme
     color-theme-solarized

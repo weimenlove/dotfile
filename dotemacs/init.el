@@ -55,6 +55,7 @@
 (require 'init-auto-complete-c-headers)
 (require 'init-yasnippet)
 (require 'init-evil)
+(require 'init-color-theme)
 
 ;;Show column number
 (global-linum-mode 1) ; always show line numbers
