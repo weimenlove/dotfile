@@ -57,8 +57,4 @@
 (require 'init-evil)
 (require 'init-color-theme)
 (require 'init-dired)
-
-;;Show column number
-(global-linum-mode 1) ; always show line numbers
-(require 'linum-relative)
-(linum-relative-on)
+(require 'init-linum-mode)
