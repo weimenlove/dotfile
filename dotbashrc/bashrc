@@ -134,8 +134,12 @@ pathmunge(){
 }
 
 # add path for cross-tool
-export ARM_CROSS=/opt/arm-2008q3
+export ARM_CROSS=/opt/CodeSourcery/Sourcery_G++_Lite
+export JAVA_HOME=/opt/jdk1.7.0_80
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+pathmunge $JAVA_HOME/bin
 pathmunge $ARM_CROSS/bin
+pathmunge /opt/repo/bin
 
 export PATH
 unset pathmunge
