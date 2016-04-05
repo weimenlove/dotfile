@@ -2,17 +2,20 @@
 
 rm -f ~/.bashrc
 ln -s ~/.dotfile/dotbashrc/bashrc ~/.bashrc
-rm -f ~/.vimrc
-ln -s ~/.dotfile/dotvim/vimrc ~/.vimrc
+
+rm -fr ~/.vimrc ~/.vim
+ln -s ~/.dotfile/dotvim ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 rm -f ~/.gitconfig
 ln -s ~/.dotfile/dotgitconfig/gitconfig ~/.gitconfig
 rm -f ~/.gitignore
 ln -s ~/.dotfile/dotgitconfig/gitignore ~/.gitignore
-rm -f ~/.spacemacs
-ln -s ~/.dotfile/dotspacemacs ~/.spacemacs
 
-git submodule add git@github.com:tpope/vim-pathogen.git dotvim/bundle/vim-pathogen
-git submodule add git@github.com:msanders/snipmate.vim.git dotvim/bundle/vim-snipmate
+# install snipmate
+cd ~/.vim/bundle && \
+git clone git://github.com/msanders/snipmate.vim.git
 
-git submodule update --init
-git submodule foreach git pull origin master
