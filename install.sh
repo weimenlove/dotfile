@@ -19,3 +19,6 @@ ln -s ~/.dotfile/dotgitconfig/gitignore ~/.gitignore
 cd ~/.vim/bundle && \
 git clone git://github.com/msanders/snipmate.vim.git
 
+# install supertab
+cd ~/.vim/bundle && \
+git clone git://github.com/ervandew/supertab
