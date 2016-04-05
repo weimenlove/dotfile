@@ -1,5 +1,7 @@
 *.o
+*.class
 *.pro.user
+.idea
 /dotemacs/elpa/
 /dotemacs/backups/
 /dotvim/bundle/
