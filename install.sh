@@ -19,6 +19,12 @@ ln -s ~/.dotfile/dotgitconfig/gitignore ~/.gitignore
 cd ~/.vim/bundle && \
 git clone git://github.com/msanders/snipmate.vim.git
 
-# install supertab
+# install syntastic
 cd ~/.vim/bundle && \
-git clone git://github.com/ervandew/supertab
+git clone https://github.com/scrooloose/syntastic
+
+cd ~/.vim/bundle && \
+git clone https://github.com/scrooloose/nerdcommenter
+
+cd ~/.vim/bundle && \
+git clone https://github.com/Townk/vim-autoclose
