@@ -20,3 +20,5 @@
     tool = meld
 [mergetool]
     prompt = false
+[http]
+	cookiefile = /home/fantity/.gitcookies

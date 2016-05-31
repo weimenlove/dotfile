@@ -15,6 +15,11 @@ ln -s ~/.dotfile/dotgitconfig/gitconfig ~/.gitconfig
 rm -f ~/.gitignore
 ln -s ~/.dotfile/dotgitconfig/gitignore ~/.gitignore
 
+rm -f ~/.tmux.conf
+mkdir -p dottmux/plugin
+ln -s ~/.dotfile/dottmux/tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tmux-resurrect ~/.dotfile/dottmux/plugin
+
 # install snipmate
 cd ~/.vim/bundle && \
 git clone git://github.com/msanders/snipmate.vim.git

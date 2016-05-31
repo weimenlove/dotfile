@@ -141,6 +141,7 @@ export ARM_CROSS=/opt/CodeSourcery/Sourcery_G++_Lite
 #pathmunge $JAVA_HOME/bin
 pathmunge $ARM_CROSS/bin
 pathmunge /opt/repo/bin
+pathmunge /opt/depot_tools
 
 export PATH
 unset pathmunge
