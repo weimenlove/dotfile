@@ -62,6 +62,9 @@
 ;;(bind-key "C-+" 'text-scale-increase)
 ;;(bind-key "C--" 'text-scale-decrease)
 
+;; delete trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;;Tab width of 4 is compact and readable
 (setq-default tab-width 4)
 (setq tab-width 4)
@@ -94,14 +97,15 @@
 (require 'init-org)
 (require 'init-org-mime)
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(org-agenda-files (quote ("~/work/work.org"))))
+;; custom-set-variables was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+'(org-agenda-files (quote ("~/Dropbox/org/work.org"))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  )
+;; custom-set-faces was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+;; If there is more than one, they won't work right.
+'(org-done ((t (:foreground "PaleGreen" :weight normal :strike-through t))))
+'(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t)))))

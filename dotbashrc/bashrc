@@ -134,7 +134,7 @@ pathmunge(){
 }
 
 # add path for cross-tool
-export ARM_CROSS=/opt/CodeSourcery/Sourcery_G++_Lite
+export ARM_CROSS=$HOME/CodeSourcery/Sourcery_G++_Lite
 
 #export JAVA_HOME=/opt/jdk1.7.0_80
 #export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
