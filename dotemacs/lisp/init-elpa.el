@@ -25,6 +25,8 @@
     undo-tree                           ;treat undo as a tree
     ;; vim emulation
     evil
+    smex
+    flx-ido
     dired-details
     ;; Color theme
     color-theme

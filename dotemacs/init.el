@@ -82,6 +82,8 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+(require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
+;;(require 'idle-require)
 (require 'init-elpa)
 
 ;; Choose either auto-complete or company-mode by commenting one of below two lines!
@@ -92,6 +94,8 @@
 (require 'init-yasnippet)
 (require 'init-evil)
 (require 'init-color-theme)
+(require 'init-ido)
+(require 'init-smex)
 (require 'init-dired)
 (require 'init-linum-mode)
 (require 'init-org)
