@@ -178,4 +178,16 @@
               emacs-lisp "lisp"))
 ;; }}
 
+;; http://emacs.stackexchange.com/questions/9528/is-it-possible-to-remove-emsp-from-clock-report-but-preserve-indentation/9544#9544
+(defun my-org-clocktable-indent-string (level)
+  (if (= level 1)
+      ""
+    (let ((str "\\"))
+      (while (> level 2)
+        (setq level (1- level)
+              str (concat str "__")))
+      (concat str "__ "))))
+
+(advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
+
 (provide 'init-org)
