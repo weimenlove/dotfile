@@ -102,11 +102,11 @@ endif
 " Add 2012-5-7
 set encoding=utf-8
 set termencoding=utf-8
-set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
+set fileencodings=utf-8,gb2312,big5,latin1
 set number
 "set background=dark
 "color murphy
-set gfn=Source\ Code\ Pro\ 14
+set gfn=Ubuntu\ Mono\ 14
 set clipboard+=unnamed
 set showmatch
 set matchtime=5
