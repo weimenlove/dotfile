@@ -5,7 +5,7 @@
     email = weimenlove@gmail.com
 [core]
     editor = vim
-    excludesfile = /home/weimen/.gitignore
+	excludesfile = /home/jsst/.gitignore
     fileMode = false
 [alias]
     ci = commit -s

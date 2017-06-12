@@ -6,4 +6,7 @@
 /dotemacs/elpa/
 /dotemacs/backups/
 /dotvim/bundle/
+__pycache__
+*.patch
+*.diff
 \#*\#
