@@ -6,7 +6,8 @@
 [core]
     editor = vim
 	excludesfile = /home/jsst/.gitignore
-    fileMode = false
+	fileMode = false
+	quotepath = false
 [alias]
     ci = commit -s
     st = status
