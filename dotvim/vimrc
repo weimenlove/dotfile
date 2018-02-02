@@ -116,8 +116,8 @@ set nobackup
 set noswapfile
 set incsearch    " show search matches as you type
 set shiftround   " use multiple of shiftwidth when indenting with '<' and '>'
-set noexpandtab
-"set expandtab
+"et noexpandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set cursorline
@@ -142,6 +142,7 @@ function! UpdateLcs()
 endfunction
 
 autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * call UpdateLcs()
+autocmd Filetype make setlocal noexpandtab
 
 set list
 
