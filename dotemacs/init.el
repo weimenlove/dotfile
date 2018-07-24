@@ -73,6 +73,9 @@
 ;;hide welcome
 (setq inhibit-startup-message t)
 
+;;auto reload
+(global-auto-revert-mode t)
+
 ;;Don't show whitespace in diff, but show context
 (setq vc-diff-switches '("-b" "-B" "-u"))
 
@@ -106,9 +109,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-	("~/work/org_node/work.org" "~/work/org_node/goal.org"))))
+ '(org-agenda-files (quote ("~/work/org_node/work.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
