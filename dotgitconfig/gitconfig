@@ -8,6 +8,7 @@
 	excludesfile = /home/jsst/.gitignore
 	fileMode = false
 	quotepath = false
+	autocrlf = true
 [alias]
     ci = commit -s
     st = status

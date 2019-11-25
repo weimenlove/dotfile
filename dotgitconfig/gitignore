@@ -3,9 +3,7 @@
 *.pro.user
 .idea
 *~
-/dotemacs/elpa/
 /dotemacs/backups/
-/dotvim/bundle/
 __pycache__
 *.patch
 *.diff
