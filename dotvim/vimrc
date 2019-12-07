@@ -57,40 +57,6 @@ if (&t_Co > 2) || has("gui_running")
 	set hlsearch
 endif
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -140,9 +106,6 @@ function! UpdateLcs()
 		setlocal nolist
 	endif
 endfunction
-
-autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * call UpdateLcs()
-autocmd Filetype make setlocal noexpandtab
 
 set list
 
@@ -195,35 +158,3 @@ nmap <silent> <F5> :nohlsearch<CR>
 "let g:miniBufExplMaxSize = 1
 
 "runtime local.vim
-
-"" 定义函数setTitle，自动插入头文件
-func SetTitle()
-	"如果文件类型为.sh文件
-	if &filetype == 'sh'
-		call setline(1,          "\#################################################################")
-		call append(line("."),   "\# File Name: ".expand("%"))
-		call append(line(".")+1, "\# Author: Matthew Wei")
-		call append(line(".")+2, "\# E-mail: weimenlove@gmail.com")
-		call append(line(".")+3, "\# Created Time: ".strftime("%c"))
-		call append(line(".")+4, "\#################################################################")
-		call append(line(".")+5, "")
-		call append(line(".")+6, "\#!/bin/sh")
-		call append(line(".")+7, "")
-	else
-		call setline(1,          "/****************************************************************")
-		call append(line("."),   " * File Name: ".expand("%"))
-		call append(line(".")+1, " * Author: Matthew Wei")
-		call append(line(".")+2, " * E-mail: weimenlove@gmail.com")
-		call append(line(".")+3, " * Created Time: ".strftime("%c"))
-		call append(line(".")+4, "****************************************************************/")
-		call append(line(".")+5, "")
-	endif
-	if &filetype == 'c'
-		call append(line(".")+6, "#include <stdio.h>")
-		call append(line(".")+7, "")
-	endif
-endfunc
-
-"新建.c .h .sh时，自动插入文件头
-autocmd BufNewFile *.c,*.h exec ":call SetTitle()"
-
