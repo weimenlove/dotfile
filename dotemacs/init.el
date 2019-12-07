@@ -1,5 +1,9 @@
 ;; -*- coding: utf-8 -*-
 
+;; System locale to use for formatting time values.
+(setq system-time-locale "C")         ; Make sure that the weekdays in the
+                                      ; time stamps of your Org mode files and
+                                      ; in the agenda appear in English.
 ;;Personal information
 (setq user-full-name "Fantity Wei"
   user-mail-address "weimenlove@gmail.com")
